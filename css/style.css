@@ -1,0 +1,95 @@
+/* Fuente importada de Google Fonts*/
+@import url(http://fonts.googleapis.com/css?family=Francois+One);
+
+body {
+    background-color: #1d1f20;
+    font-family: 'Francois One', sans-serif;
+}
+
+header{
+    background-color: #181a1b;
+    border-radius: 90px;
+    box-shadow: 1px 1px 0 rgba(255, 255, 255, 0.05), inset 1px 1px 1px rgba(0, 0, 0, 0.3);
+    left: 50%; /* Damos un espacio del 50% en la parte izquierda */
+    max-width: 800px; /* Tamaño máximo del contenedor */
+    position: absolute;
+    top: 50%; /* Un espacion en la parte superior del 50%*/
+    transform: translate(-50%, -50%); /* Modificamos el espacio de coordenadas, para centrar el contenedor*/
+    width: 100%;
+}
+
+nav{
+    border-radius: 90px;
+    box-shadow: 0 2px 2px rgba(0, 0, 0, 0.3);
+    margin: .5em;
+}
+
+ul{
+    display: flex; /* Ponemos su contenido de forma horizontal */
+    list-style: none; /* Quitamos el estilo por defecto de la lista */
+    margin: 0;
+    padding: 0;
+}
+
+ul a{
+    background-color: #35393b;
+    color: #fff;
+    display: block;
+    line-height: 1em; /* Establecemos el interlineado del texto */
+    padding: 1em;
+    text-align: center;
+    text-decoration: none; /* Retiramos los estilos por defecto que tienen los links del menu */
+    transition: all 100ms ease-out; /* Efecto cuando el mouse sale de un elemento <a></a> */
+}
+
+ul a:hover, ul a:active, ul a.active{
+    background-color: #f1c40f;
+    box-shadow: inset 0 -0.3em 0 rgba(0, 0, 0, 0.3);
+    margin-top: -.3em;
+    padding-bottom: 1.3em;
+    position: relative;
+}
+
+ul a:hover:after, ul a:active:after, ul a.active:after{
+    background-color: rgba(0, 0, 0, 0.05);
+    border-bottom: 1px solid rgba(241, 196, 15,1.0);
+    bottom: -.5em;
+    content: '';
+    display: block;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: .3em;
+}
+
+ul li{
+    flex: 1; /* Los li abarcan el tamaño completo del menú */
+}
+
+ul li + li{
+    box-shadow: -2px 0 0 rgba(0, 0, 0, 0.2), -1px 0 0 rgba(255, 255, 255, 0.15);
+}
+
+/* Redondear el borde izquierdo del elemento ul */
+ul li:first-child a{
+    border-top-left-radius: 90px;
+    border-bottom-left-radius: 90px;
+}
+
+ul li:first-child a:hover:after, ul li:first-child a:active:after, ul li:first-child a.active:after{
+    border-top-left-radius: inherit;
+    border-bottom-left-radius: inherit;
+    left: -.5em;
+}
+
+/* Redondear el borde derecho del elemento ul */
+ul li:last-child a{
+    border-top-right-radius: 90px;
+    border-bottom-right-radius: 90px;
+}
+
+ul li:last-child a:hover:after, ul li:last-child a:active:after, ul li:last-child a.active:after{
+    border-top-right-radius: inherit;
+    border-bottom-right-radius: inherit;
+    right: -.5em;
+}
